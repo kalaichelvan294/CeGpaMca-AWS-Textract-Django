@@ -1,0 +1,32 @@
+{% extends "mcagpa/base.html" %}
+{% block content %}
+<div><p> </p></div>
+<div><p> </p></div><br><br><br>
+<div class="hero-unit">
+    <h1><strong>(Ce[G)pa]{Mca}</strong></h1><h5>for/by Masters of Computer Applications</h5>
+    <p>
+        <div class="">
+            <form class="upload_form" id="uploadid" method="POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <!-- <input class="btn btn-outline-success my-2 my-sm-0" type="file" /> -->
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="img" name="resultimg" accept=".jpg,.jpeg,.png,.PNG,.JPG,.JPEG" required>
+                    <label class="custom-file-label" for="customFile">select image of your semester result (jpg/jpeg)</label>
+                    <div id="subdivid"><button class="btn btn-outline-success my-1 my-sm-2 up_btn" type="submit" id="btnid">Upload and Get Results</button></div>
+                </div>
+            </form>
+        </div>
+    </p>
+  </div>
+    <div class="container"><br><br>
+
+        <div id="restab">
+        </div>
+    </div>
+    <br>
+    <div id="alertid">
+        <div class="alert alert-dismissible alert-primary fade show" role="alert">Ready to roll!!</div>
+    </div>
+
+{% endblock content %}
+
